@@ -65,9 +65,7 @@ int main() {
                     best_k = k;
                 }
                 else if (fabs(dp_prev[k] - best_prev) < 1e-12) {
-                    if (k < best_k) {
-                        best_k = k;
-                    }
+                      if (k > best_k) best_k = k;
                 }
 
             }
