@@ -64,6 +64,12 @@ int main() {
                     best_prev = dp_prev[k];
                     best_k = k;
                 }
+                else if (fabs(dp_prev[k] - best_prev) < 1e-12) {
+                    if (k < best_k) {
+                        best_k = k;
+                    }
+                }
+
             }
             // Tính chi phí khi lá i chọn grid[j]
             dp_curr[j] = best_prev + w[i] * fabs(x[i] - yj);
